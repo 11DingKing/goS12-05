@@ -1,0 +1,7 @@
+{
+  "port": 51219,
+  "report_sla_minutes": 15,
+  "dispatch_sla_minutes": 20,
+  "transfer_timeout_minutes": 30,
+  "scheduler_interval_seconds": 30
+}
