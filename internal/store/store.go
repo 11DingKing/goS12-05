@@ -286,7 +286,7 @@ func (s *Store) ConsumePart(partID string, qty int) (*domain.SparePart, *domain.
 		return nil, nil, fmt.Errorf("consume part %s: %w", partID, domain.ErrPartNotFound)
 	}
 	if err := p.Consume(qty); err != nil {
-		return nil, nil, fmt.Errorf("consume part %s rejected: %s", partID, err.Error())
+		return nil, nil, fmt.Errorf("consume part %s rejected: %w", partID, err)
 	}
 	var req *domain.ReplenishmentRequest
 	if p.BelowSafetyLine() {
